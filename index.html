@@ -2,259 +2,238 @@
 
 <head>
 
-<meta name="keywords" content="HTML, Bootstrap, Facebook, Reactions">
-<meta name="description" content="Tracks Facebook reactions in real time">
-<meta name="author" content="Rex Ledesma and Peiyong Zhang">
-		<title>ReactBook</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML, Bootstrap, Facebook, Reactions">
+    <meta name="description" content="Tracks Facebook reactions in real time">
+    <meta name="author" content="Rex Ledesma and Peiyong Zhang">
+    <title>ReactBook</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
-<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-<style type="text/css">
-
-
-@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-
-.login {
-	opacity:0;  /* make things invisible upon start */
-	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-	-moz-animation:fadeIn ease-in 1;
-	animation:fadeIn ease-in 1;
-
-	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-	-moz-animation-fill-mode:forwards;
-	animation-fill-mode:forwards;
-
-	-webkit-animation-duration:1s;
-	-moz-animation-duration:1s;
-	animation-duration:1s;
-
-	height: 20%;
-	width: 50%;
-
-}
-
-
- 
-.login.two {
--webkit-animation-delay: .6s;
--moz-animation-delay:.6s;
-animation-delay: .6s;
-
-
-}
-
-.login.three {
--webkit-animation-delay: 1s;
--moz-animation-delay:1s;
-animation-delay: 1s;
-display:block;
-text-align: center;
-margin-right: auto;
-margin-left: auto;
-margin-top: 5%
-
-}
-
-.login.four {
--webkit-animation-delay: 1.5s;
--moz-animation-delay:1.5s;
-animation-delay: 1.5s;
-display:block;
-text-align: center;
-margin-right: auto;
-margin-left: auto;
-margin-top: 7%
-
-}
-
-
-#madeby{
-
-   position:absolute;
-   bottom:0;
-   width:100%;
-   height:20px;   /* Height of the footer */
-   background:#3b5998;
-   text-align :center;
-   vertical-align: bottom;
-   font-family: helvetica;
-   color: white;
-     
-}
-
-.jumbotron {
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://dl.dropboxusercontent.com/s/cfl0gfge6px2dun/new%20background.png?dl=0');
-    background-position:center top;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 0px;
-   opacity: 0.9;
-    filter: alpha(opacity=40);
--webkit-animation-delay: 0.3s;
--moz-animation-delay: 0.3s;
-animation-delay: 0.3s;
-}
-
-.jumbotron .container {
-  position: relative;
-  top:100px;
-}
-
-.jumbotron h1 {
-  color: #fff;
-  font-size: 48px;
-  font-family: 'Shift', sans-serif;
-  font-weight: bold;
-}
-
-.jumbotron p {
-  font-size: 20px;
-  color: #fff;
-}
-
-#loginbutton{
-	width : 20%;
-	background-color: #A3BCF9;
-}
-
-
-.row{
-	width: 100%
-}
-
-
-
-#projectname{
-	text-align: cetner;
-	font-family: Lato, sans-serif
-
-}
-
-#description{
-	text-align: cetner;
-	font-family: Lato, sans-serif
-	margin-bottom:50px;
-
-}
-
-
-
-.input {
-	height:30px;
-  border: 0;
-  width: calc(40% - 2px);
-	margin-top: 2%;
-	margin-left: auto;
-	margin-right: auto;
-  box-shadow: -7px 10px 0px -7px #ebebeb, 7px 10px 0px -7px #ebebeb;
-  -webkit-transition: box-shadow 0.3s;
-  transition: box-shadow 0.3s;
-	font-size: 20px;
-	display: block;
-	padding-left: 10px;
-
-}
-
-
-
-.submit:hover {
-   
-}
-
-
-#form{
-	margin-right: auto;
-	margin-left: auto;
-}
-
-#block {
-
-	margin-right: auto;
-	margin-right: auto;
-    background-color: #0000CC;
-    width: 200px;
-    color: white;
-    font-family: verdana, serif;
-    font-size: 25px;
-    text-decoration: none;
-    cursor: pointer;
-    border: 2px solid white;
-    display:block;
-}
-
-#block:hover {
-
- border: 2px solid #C6A971;
-    background:#000051;
-    box-shadow: 0px 0px 5px #C6A971;
-}
-
-
-
-#block:active {
-  background-color: #000051;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-
-.intro{
-	font-family: helvetica;
-
-}
-
-
-</style>
+    <style type="text/css">
+        @-webkit-keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @-moz-keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .login {
+            opacity: 0;
+            /* make things invisible upon start */
+            -webkit-animation: fadeIn ease-in 1;
+            /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+            -moz-animation: fadeIn ease-in 1;
+            animation: fadeIn ease-in 1;
+            -webkit-animation-fill-mode: forwards;
+            /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+            -moz-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+            -webkit-animation-duration: 1s;
+            -moz-animation-duration: 1s;
+            animation-duration: 1s;
+            height: 20%;
+            width: 50%;
+        }
+        .login.two {
+            -webkit-animation-delay: .6s;
+            -moz-animation-delay: .6s;
+            animation-delay: .6s;
+        }
+        .login.three {
+            -webkit-animation-delay: 1s;
+            -moz-animation-delay: 1s;
+            animation-delay: 1s;
+            display: block;
+            text-align: center;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 5%
+        }
+        .login.four {
+            -webkit-animation-delay: 1.5s;
+            -moz-animation-delay: 1.5s;
+            animation-delay: 1.5s;
+            display: block;
+            text-align: center;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 7%
+        }
+        #madeby {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 20px;
+            /* Height of the footer */
+            background: #3b5998;
+            text-align: center;
+            vertical-align: bottom;
+            font-family: helvetica;
+            color: white;
+        }
+        .jumbotron {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://dl.dropboxusercontent.com/s/cfl0gfge6px2dun/new%20background.png?dl=0');
+            background-position: center top;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0px;
+            opacity: 0.9;
+            filter: alpha(opacity=40);
+            -webkit-animation-delay: 0.3s;
+            -moz-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+        }
+        .jumbotron .container {
+            position: relative;
+            top: 100px;
+        }
+        .jumbotron h1 {
+            color: #fff;
+            font-size: 48px;
+            font-family: 'Shift', sans-serif;
+            font-weight: bold;
+        }
+        .jumbotron p {
+            font-size: 20px;
+            color: #fff;
+        }
+        #loginbutton {
+            width: 20%;
+            background-color: #A3BCF9;
+        }
+        .row {
+            width: 100%
+        }
+        #projectname {
+            text-align: cetner;
+            font-family: Lato, sans-serif
+        }
+        #description {
+            text-align: cetner;
+            font-family: Lato, sans-serif margin-bottom: 50px;
+        }
+        .input {
+            height: 30px;
+            border: 0;
+            width: calc(40% - 2px);
+            margin-top: 2%;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: -7px 10px 0px -7px #ebebeb, 7px 10px 0px -7px #ebebeb;
+            -webkit-transition: box-shadow 0.3s;
+            transition: box-shadow 0.3s;
+            font-size: 20px;
+            display: block;
+            padding-left: 10px;
+        }
+        .submit:hover {} #form {
+            margin-right: auto;
+            margin-left: auto;
+        }
+        #block {
+            margin-right: auto;
+            margin-right: auto;
+            background-color: #0000CC;
+            width: 200px;
+            color: white;
+            font-family: verdana, serif;
+            font-size: 25px;
+            text-decoration: none;
+            cursor: pointer;
+            border: 2px solid white;
+            display: block;
+        }
+        #block:hover {
+            border: 2px solid #C6A971;
+            background: #000051;
+            box-shadow: 0px 0px 5px #C6A971;
+        }
+        #block:active {
+            background-color: #000051;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+        .intro {
+            font-family: helvetica;
+        }
+    </style>
 
 </head>
 
 <body>
 
-	<script type="text/javascript">
-	function store(){
-			localStorage.setItem('search', document.getElementById("search").value);
-	}
-</script>
-	<div class="jumbotron">
-		
-
-  		<div class="login three">
-  			<h1 id = "projectname" class="intro">ReactBook</h1>
-			<p id = "description" class="intro">How are people reacting to Facebook posts? </p>
-			<p class="intro">We'll show you how people feel with </p>
-			<p class="intro">a real-time display of reactions. </p>
-				
-
-		</div>
-
-		<div class="login four">
-			<form action ="results.html" method="POST" id="form">
-				<div class="field2">
-					
-					<input class="input" id="search" name=search type=text required placeholder="  Search topic" required onkeydown="if (event.keyCode == 13) { store();}">
-					
-					
-				</div>
-				
-				</form>
-		</div>
-		
-	</div>
+    <div class="jumbotron">
 
 
-	<div id= "madeby" class= "login two">
-  		Made with <i class="em em-heart"></i> by Steven Zhang and Rex Ledesma
-	
-	</div>
+        <div class="login three">
+            <h1 id="projectname" class="intro">ReactBook</h1>
+            <p id="description" class="intro">How are people reacting to Facebook posts?</p>
+            <p class="intro">We'll show you how people feel with</p>
+            <p class="intro">a real-time display of reactions.</p>
 
 
+        </div>
+        <br><br>
+        <div class="login four">
+            <div class="field2">
+
+                <input class="input" id="search" name=search type=text required placeholder="  Search topic">
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div id="madeby" class="login two">
+        Made with <i class="em em-heart"></i> by Steven Zhang and Rex Ledesma
+
+    </div>
+
+
+    <script type="text/javascript">
+        document.getElementById("search").addEventListener("keypress", function(event) {
+            if (event.keyCode == 13) {
+                if (document.getElementById("search").value != "") {
+                    //window.open('http://stevenzhang18.github.io/ReactBook/results.html?q=' + document.getElementById("search").value, '_self', false)
+                    window.open('results.html?q=' + document.getElementById("search").value, '_self', false)
+
+                } else {
+                    alert("Please fill out the search")
+
+                }
+            }
+        });
+        /*	function store(){
+        			localStorage.setItem('search', document.getElementById("search").value);
+        	}*/
+    </script>
 
 </body>
+
 </html>
