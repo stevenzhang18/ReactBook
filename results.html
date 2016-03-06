@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -8,7 +6,18 @@
 <script type="text/javascript" >
 
 window.onload = function () {
-   var like = new CanvasJS.Chart("chartContainerlike", {
+    
+    query = window.location.href.match(/\?q=(.*)/);
+    if (query != null) {
+        document.getElementById("header").innerHTML = "<h2>Results for " + query[1] + "</h2>";
+    } else {
+        window.open('http://stevenzhang18.github.io/ReactBook', '_self', false);
+    }
+
+
+
+
+    var like = new CanvasJS.Chart("chartContainerlike", {
         title:{
             text: "Like Reactions"              
         },
@@ -52,7 +61,7 @@ window.onload = function () {
         ]
     });
 
-     
+
      love.render();
 
            var haha = new CanvasJS.Chart("chartContainerhaha", {
@@ -154,7 +163,6 @@ var angry = new CanvasJS.Chart("chartContainerangry", {
     var lengthlike = like.options.data[0].dataPoints.length;   
     like.options.data[0].dataPoints.push({ y: 25 - Math.random() * 10});
     like.render();
-    
 
     var lengthlove = love.options.data[0].dataPoints.length;   
     love.options.data[0].dataPoints.push({ y: 25 - Math.random() * 10});
@@ -189,7 +197,7 @@ var timer = window.setInterval(function(){
         if (counter > 20){
             clearInterval(timer);
         }
-    }, 2000)
+    }, 5000)
 
 
 
@@ -217,11 +225,19 @@ var timer = window.setInterval(function(){
     bottom: 1px;
     width: 10%;
     opacity: 0;
+
+
+}
+
+#header{
+    text-align: center;
+
 }
 </style>
 
 </head>  
 <body>  
+  <div id="header"></div>
     <div id = "firstthree" style = "height: 100%; width 50%;">
 <div id="chartContainerlike" style="height: 200px; width: 100%;"></div>
 <div id="chartContainerlove" style="height: 200px; width: 100%;"></div>
@@ -234,6 +250,9 @@ var timer = window.setInterval(function(){
 <div id="chartContainerangry" style="height: 200px; width: 100%;"></div>
 </div>
 <button id="addDataPoint">Update</button>  
+
+
 </body>
 
 </html>
+
