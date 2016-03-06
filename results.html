@@ -8,20 +8,22 @@
 <script type="text/javascript" >
 
 window.onload = function () {
-    var like = new CanvasJS.Chart("chartContainerlike", {
+   var like = new CanvasJS.Chart("chartContainerlike", {
         title:{
             text: "Like Reactions"              
         },
-        data: [              
+        axisX:{
+            labelFormatter: function(e){
+                return  5* + e.value;
+            }
+        },
+        data: [             
         {
             // Change type to "doughnut", "line", "splineArea", etc.
             type: "line",
             dataPoints: [
-                {  y: 10  },
-                {  y: 15  },
                 {  y: 25  },
-                {   y: 30  },
-                {   y: 28  }
+         
             ]
         }
         ]
@@ -33,36 +35,42 @@ window.onload = function () {
         title:{
             text: "Love Reactions"              
         },
-        data: [              
+        axisX:{
+            labelFormatter: function(e){
+                return  5* + e.value;
+            }
+        },
+        data: [             
         {
             // Change type to "doughnut", "line", "splineArea", etc.
             type: "line",
             dataPoints: [
-                {  y: 10  },
-                {  y: 15  },
                 {  y: 25  },
-                {   y: 30  },
-                {   y: 28  }
+         
             ]
         }
         ]
     });
+
+     
      love.render();
 
            var haha = new CanvasJS.Chart("chartContainerhaha", {
         title:{
             text: "Lmao Reactions"              
         },
-        data: [              
+        axisX:{
+            labelFormatter: function(e){
+                return  5* + e.value;
+            }
+        },
+        data: [             
         {
             // Change type to "doughnut", "line", "splineArea", etc.
             type: "line",
             dataPoints: [
-                {  y: 10  },
-                {  y: 15  },
                 {  y: 25  },
-                {   y: 30  },
-                {   y: 28  }
+         
             ]
         }
         ]
@@ -73,16 +81,18 @@ window.onload = function () {
         title:{
             text: "Wow Reactions"              
         },
-        data: [              
+        axisX:{
+            labelFormatter: function(e){
+                return  5* + e.value;
+            }
+        },
+        data: [             
         {
             // Change type to "doughnut", "line", "splineArea", etc.
             type: "line",
             dataPoints: [
-                {  y: 10  },
-                {  y: 15  },
                 {  y: 25  },
-                {   y: 30  },
-                {   y: 28  }
+         
             ]
         }
         ]
@@ -93,16 +103,18 @@ window.onload = function () {
         title:{
             text: "Sad Reactions"              
         },
-        data: [              
+        axisX:{
+            labelFormatter: function(e){
+                return  5* + e.value;
+            }
+        },
+        data: [             
         {
             // Change type to "doughnut", "line", "splineArea", etc.
             type: "line",
             dataPoints: [
-                {  y: 10  },
-                {  y: 15  },
                 {  y: 25  },
-                {   y: 30  },
-                {   y: 28  }
+         
             ]
         }
         ]
@@ -113,16 +125,18 @@ var angry = new CanvasJS.Chart("chartContainerangry", {
         title:{
             text: "Angry Reactions"              
         },
-        data: [              
+        axisX:{
+            labelFormatter: function(e){
+                return  5* + e.value;
+            }
+        },
+        data: [             
         {
             // Change type to "doughnut", "line", "splineArea", etc.
             type: "line",
             dataPoints: [
-                {  y: 10  },
-                {  y: 15  },
                 {  y: 25  },
-                {   y: 30  },
-                {   y: 28  }
+         
             ]
         }
         ]
