@@ -1,252 +1,239 @@
+
+
 <!DOCTYPE HTML>
 <html>
-
 <head>
-    <script src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
-    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
-    <script type="text/javascript">
-        window.onload = function() {
-            query = window.location.href.match(/\?q=(.*)/)
-            if (query != null) {
-                document.getElementById("header").innerHTML = "<h2>Results for " + query[1] + "</h2>"
+<script src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+<script type="text/javascript" >
 
-            } else {
-
-                window.open('http://stevenzhang18.github.io/ReactBook', '_self', false)
-
+window.onload = function () {
+   var like = new CanvasJS.Chart("chartContainerlike", {
+        title:{
+            text: "Like Reactions"              
+        },
+        axisX:{
+            labelFormatter: function(e){
+                return  5* + e.value;
             }
-            var like = new CanvasJS.Chart("chartContainerlike", {
-                title: {
-                    text: "Like Reactions"
-                },
-                data: [{
-                    // Change type to "doughnut", "line", "splineArea", etc.
-                    type: "line",
-                    dataPoints: [{
-                        y: 10
-                    }, {
-                        y: 15
-                    }, {
-                        y: 25
-                    }, {
-                        y: 30
-                    }, {
-                        y: 28
-                    }]
-                }]
-            });
-            like.render();
-
-
-            var love = new CanvasJS.Chart("chartContainerlove", {
-                title: {
-                    text: "Love Reactions"
-                },
-                data: [{
-                    // Change type to "doughnut", "line", "splineArea", etc.
-                    type: "line",
-                    dataPoints: [{
-                        y: 10
-                    }, {
-                        y: 15
-                    }, {
-                        y: 25
-                    }, {
-                        y: 30
-                    }, {
-                        y: 28
-                    }]
-                }]
-            });
-            love.render();
-
-            var haha = new CanvasJS.Chart("chartContainerhaha", {
-                title: {
-                    text: "Lmao Reactions"
-                },
-                data: [{
-                    // Change type to "doughnut", "line", "splineArea", etc.
-                    type: "line",
-                    dataPoints: [{
-                        y: 10
-                    }, {
-                        y: 15
-                    }, {
-                        y: 25
-                    }, {
-                        y: 30
-                    }, {
-                        y: 28
-                    }]
-                }]
-            });
-            haha.render();
-
-            var wow = new CanvasJS.Chart("chartContainerwow", {
-                title: {
-                    text: "Wow Reactions"
-                },
-                data: [{
-                    // Change type to "doughnut", "line", "splineArea", etc.
-                    type: "line",
-                    dataPoints: [{
-                        y: 10
-                    }, {
-                        y: 15
-                    }, {
-                        y: 25
-                    }, {
-                        y: 30
-                    }, {
-                        y: 28
-                    }]
-                }]
-            });
-            wow.render();
-
-            var sad = new CanvasJS.Chart("chartContainersad", {
-                title: {
-                    text: "Sad Reactions"
-                },
-                data: [{
-                    // Change type to "doughnut", "line", "splineArea", etc.
-                    type: "line",
-                    dataPoints: [{
-                        y: 10
-                    }, {
-                        y: 15
-                    }, {
-                        y: 25
-                    }, {
-                        y: 30
-                    }, {
-                        y: 28
-                    }]
-                }]
-            });
-            sad.render();
-
-            var angry = new CanvasJS.Chart("chartContainerangry", {
-                title: {
-                    text: "Angry Reactions"
-                },
-                data: [{
-                    // Change type to "doughnut", "line", "splineArea", etc.
-                    type: "line",
-                    dataPoints: [{
-                        y: 10
-                    }, {
-                        y: 15
-                    }, {
-                        y: 25
-                    }, {
-                        y: 30
-                    }, {
-                        y: 28
-                    }]
-                }]
-            });
-            angry.render();
-
-
-
-
-
-
-
-            $("#addDataPoint").click(function() {
-
-                var lengthlike = like.options.data[0].dataPoints.length;
-                like.options.data[0].dataPoints.push({
-                    y: 25 - Math.random() * 10
-                });
-                like.render();
-
-                var lengthlove = love.options.data[0].dataPoints.length;
-                love.options.data[0].dataPoints.push({
-                    y: 25 - Math.random() * 10
-                });
-                love.render();
-
-                var lengthhaha = haha.options.data[0].dataPoints.length;
-                haha.options.data[0].dataPoints.push({
-                    y: 25 - Math.random() * 10
-                });
-                haha.render();
-
-                var lengthwow = wow.options.data[0].dataPoints.length;
-                wow.options.data[0].dataPoints.push({
-                    y: 25 - Math.random() * 10
-                });
-                wow.render();
-
-                var lengthsad = sad.options.data[0].dataPoints.length;
-                sad.options.data[0].dataPoints.push({
-                    y: 25 - Math.random() * 10
-                });
-                sad.render();
-
-                var lengthangry = angry.options.data[0].dataPoints.length;
-                angry.options.data[0].dataPoints.push({
-                    y: 25 - Math.random() * 10
-                });
-                angry.render();
-            });
+        },
+        data: [             
+        {
+            // Change type to "doughnut", "line", "splineArea", etc.
+            type: "line",
+            dataPoints: [
+                {  y: 25  },
+         
+            ]
         }
-    </script>
-    <script type="text/javascript">
-        var counter = 0;
-        var timer = window.setInterval(function() {
-            document.getElementById("addDataPoint").click();
-            counter++;
-            if (counter > 20) {
-                clearInterval(timer);
+        ]
+    });
+    like.render();
+
+
+     var love = new CanvasJS.Chart("chartContainerlove", {
+        title:{
+            text: "Love Reactions"              
+        },
+        axisX:{
+            labelFormatter: function(e){
+                return  5* + e.value;
             }
-        }, 2000)
-    </script>
-
-
-
-
-
-    <style>
-        #firstthree {
-            margin-left: 5%;
-            display: inline-block;
+        },
+        data: [             
+        {
+            // Change type to "doughnut", "line", "splineArea", etc.
+            type: "line",
+            dataPoints: [
+                {  y: 25  },
+         
+            ]
         }
-        #lastthree {
-            display: inline-block;
-            margin-left: 50%;
-        }
-        #addDataPoint {
-            margin-left: auto;
-            margin-right: auto;
-            position: fixed;
-            bottom: 1px;
-            width: 10%;
-            opacity: 0;
-        }
-        #header{
-                text-align:center;
-        }
-    </style>
+        ]
+    });
 
-</head>
+     
+     love.render();
 
-<body>
-    <div id="header"></div>
-    <div id="firstthree" style="height: 100%; width 50%;">
-        <div id="chartContainerlike" style="height: 200px; width: 100%;"></div>
-        <div id="chartContainerlove" style="height: 200px; width: 100%;"></div>
-        <div id="chartContainerhaha" style="height: 200px; width: 100%;"></div>
-    </div>
+           var haha = new CanvasJS.Chart("chartContainerhaha", {
+        title:{
+            text: "Lmao Reactions"              
+        },
+        axisX:{
+            labelFormatter: function(e){
+                return  5* + e.value;
+            }
+        },
+        data: [             
+        {
+            // Change type to "doughnut", "line", "splineArea", etc.
+            type: "line",
+            dataPoints: [
+                {  y: 25  },
+         
+            ]
+        }
+        ]
+    });
+    haha.render();
 
-    <div id="lastthree" style="height: 100%; width 50%;">
-        <div id="chartContainerwow" style="height: 200px; width: 100%;"></div>
-        <div id="chartContainersad" style="height: 200px; width: 100%;"></div>
-        <div id="chartContainerangry" style="height: 200px; width: 100%;"></div>
-    </div>
-    <button id="addDataPoint">Update</button>
+    var wow = new CanvasJS.Chart("chartContainerwow", {
+        title:{
+            text: "Wow Reactions"              
+        },
+        axisX:{
+            labelFormatter: function(e){
+                return  5* + e.value;
+            }
+        },
+        data: [             
+        {
+            // Change type to "doughnut", "line", "splineArea", etc.
+            type: "line",
+            dataPoints: [
+                {  y: 25  },
+         
+            ]
+        }
+        ]
+    });
+    wow.render();
+
+    var sad = new CanvasJS.Chart("chartContainersad", {
+        title:{
+            text: "Sad Reactions"              
+        },
+        axisX:{
+            labelFormatter: function(e){
+                return  5* + e.value;
+            }
+        },
+        data: [             
+        {
+            // Change type to "doughnut", "line", "splineArea", etc.
+            type: "line",
+            dataPoints: [
+                {  y: 25  },
+         
+            ]
+        }
+        ]
+    });
+    sad.render();
+
+var angry = new CanvasJS.Chart("chartContainerangry", {
+        title:{
+            text: "Angry Reactions"              
+        },
+        axisX:{
+            labelFormatter: function(e){
+                return  5* + e.value;
+            }
+        },
+        data: [             
+        {
+            // Change type to "doughnut", "line", "splineArea", etc.
+            type: "line",
+            dataPoints: [
+                {  y: 25  },
+         
+            ]
+        }
+        ]
+    });
+    angry.render();
+    
+
+
+
+
+    
+
+    $("#addDataPoint").click(function () {
+
+    var lengthlike = like.options.data[0].dataPoints.length;   
+    like.options.data[0].dataPoints.push({ y: 25 - Math.random() * 10});
+    like.render();
+    
+
+    var lengthlove = love.options.data[0].dataPoints.length;   
+    love.options.data[0].dataPoints.push({ y: 25 - Math.random() * 10});
+    love.render();
+
+    var lengthhaha = haha.options.data[0].dataPoints.length;   
+    haha.options.data[0].dataPoints.push({ y: 25 - Math.random() * 10});
+    haha.render();
+
+    var lengthwow = wow.options.data[0].dataPoints.length;   
+    wow.options.data[0].dataPoints.push({ y: 25 - Math.random() * 10});
+    wow.render();
+
+    var lengthsad = sad.options.data[0].dataPoints.length;   
+    sad.options.data[0].dataPoints.push({ y: 25 - Math.random() * 10});
+    sad.render();
+
+    var lengthangry = angry.options.data[0].dataPoints.length;   
+    angry.options.data[0].dataPoints.push({ y: 25 - Math.random() * 10});
+    angry.render();
+    }); 
+}
+
+
+</script>
+<script type="text/javascript">
+
+var counter =0;
+var timer = window.setInterval(function(){
+        document.getElementById("addDataPoint").click(); 
+        counter++;
+        if (counter > 20){
+            clearInterval(timer);
+        }
+    }, 2000)
+
+
+
+
+</script>
+
+
+
+
+
+<style>
+#firstthree{
+    margin-left: 5%;
+    display:inline-block;
+}
+#lastthree{
+    display:inline-block;
+    margin-left: 50%;
+}
+
+#addDataPoint{
+    margin-left: auto;
+    margin-right: auto;
+    position: fixed;
+    bottom: 1px;
+    width: 10%;
+    opacity: 0;
+}
+</style>
+
+</head>  
+<body>  
+    <div id = "firstthree" style = "height: 100%; width 50%;">
+<div id="chartContainerlike" style="height: 200px; width: 100%;"></div>
+<div id="chartContainerlove" style="height: 200px; width: 100%;"></div>
+<div id="chartContainerhaha" style="height: 200px; width: 100%;"></div>
+</div>
+
+<div  id= "lastthree" style = "height: 100%; width 50%;">
+<div id="chartContainerwow" style="height: 200px; width: 100%;"></div>
+<div id="chartContainersad" style="height: 200px; width: 100%;"></div>
+<div id="chartContainerangry" style="height: 200px; width: 100%;"></div>
+</div>
+<button id="addDataPoint">Update</button>  
 </body>
 
 </html>
