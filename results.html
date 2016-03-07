@@ -9,6 +9,11 @@ window.onload = function () {
     
     query = window.location.href.match(/\?q=(.*)/);
     if (query != null) {
+        for (var i = 0; i < query[1].length; i++) {
+            if (query[1].substring(i,i+1) === "%"){
+                query[1]=query[1].substring(0,i) + " " + query[1].substring(i+3);
+            }
+        };
         document.getElementById("header").innerHTML = "<h2>Results for " + query[1] + "</h2>";
     } else {
         window.open('http://stevenzhang18.github.io/ReactBook', '_self', false);
@@ -188,6 +193,7 @@ var angry = new CanvasJS.Chart("chartContainerangry", {
 
 
 </script>
+
 <script type="text/javascript">
 
 var counter =0;
@@ -255,4 +261,3 @@ var timer = window.setInterval(function(){
 </body>
 
 </html>
-
